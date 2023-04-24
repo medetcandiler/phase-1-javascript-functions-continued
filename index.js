@@ -26,15 +26,17 @@ mondayWork('work from home');
 function wrapAdjective( outer ) {
   if( outer == '*'){
     const innerFnc = function( inner ){
+      console.log(`You are ${outer}${inner}${outer}!`)
       return `You are ${outer}${inner}${outer}!`
     }
-    return innerFnc('a hard worker')
+    return innerFnc;
   } else if ( outer == '||'){
     const innerFnc = function( inner ){
+      console.log(`You are ${outer}${inner}${outer}!`)
       return `You are ${outer}${inner}${outer}!`
     }
-    return innerFnc('a dedicated programmer')
+    return innerFnc
   }
 }
 
-wrapAdjective('*')
+wrapAdjective('||')('a good programmer')
